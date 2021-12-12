@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+// Neutral
+$paragraphs: hsla(0, 0%, 100%, 0.75);
+$bgHeadingsButtons: hsl(0, 0%, 95%);
+
+@mixin displayFlex($direction, $just-content, $al-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $just-content;
+  align-items: $al-items;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  @include displayFlex(column, center, center);
+  min-height: 100vh;
+  padding: 2rem;
+  background: $bgHeadingsButtons;
+}
+
+main {
+  width: 315px;
+}
+
+// FIRST CONTAINER
+.container:nth-child(1) {
+  background: $brightOrange;
+  border-radius: 10px 10px 0px 0px; // only the first container has a border radius on top and left.
+
+  button:hover {
+    cursor: pointer;
+    background: $brightOrange;
+    color: $bgHeadingsButtons;
+    border: 2px solid $bgHeadingsButtons;
+  }
+}
+
+// SECOND CONTAINER
+.container:nth-child(2) {
+  background: $darkCyan;
+
+  button {
+    color: $darkCyan !important;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: $darkCyan;
+    color: $bgHeadingsButtons !important;
+    border: 2px solid $bgHeadingsButtons;
+  }
+}
+
+// THIRD CONTAINER
+.container:nth-child(3) {
+  background: $veryDarkCyan;
+  border-radius: 0px 0px 10px 10px; // only the last container has a border radius on bottom left and right.
+
+  button {
+    color: $veryDarkCyan !important;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: $veryDarkCyan;
+    color: $bgHeadingsButtons !important;
+    border: 2px solid $bgHeadingsButtons;
+  }
+}
+
+// GENERAL STYLE FOR CONTAINER
+.container {
+  @include displayFlex(column, space-evenly, flex-start);
+  height: 28em;
+  padding: 1.5em 3rem;
+
+  .details {
+    @include displayFlex(column, none, none);
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: $bgHeadingsButtons;
+  }
+
+  .paragraph {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    color: $paragraphs;
+    line-height: 1.7em;
+  }
+
+  button {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    color: $brightOrange;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 20px;
+    transition: all 100ms ease-out;
+  }
+}
+
+// ATTRIBUTION
+.attribution {
+  padding: 1rem 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $darkCyan;
+  }
+}
+
+// MEDIA QUERIS FOR RESPONSIVENESS
+@media only screen and (min-width: 60em) {
+  main {
+    @include displayFlex(row, center, none);
+    width: 100%;
+
+    border-radius: 10px;
+  }
+
+  .container {
+    flex: 0 1 300px;
+    height: 32em;
+    .details {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  .container:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .container:nth-child(3) {
+    border-radius: 0px 10px 10px 0px;
+  }
+}

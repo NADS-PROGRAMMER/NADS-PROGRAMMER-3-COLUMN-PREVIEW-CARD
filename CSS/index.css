@@ -1,1 +1,185 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f2f2f2;
+}
+
+main {
+  width: 315px;
+}
+
+.container:nth-child(1) {
+  background: #e38826;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.container:nth-child(1) button:hover {
+  cursor: pointer;
+  background: #e38826;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
+
+.container:nth-child(2) {
+  background: #006970;
+}
+
+.container:nth-child(2) button {
+  color: #006970 !important;
+}
+
+.container:nth-child(2) button:hover {
+  cursor: pointer;
+  background: #006970;
+  color: #f2f2f2 !important;
+  border: 2px solid #f2f2f2;
+}
+
+.container:nth-child(3) {
+  background: #004241;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.container:nth-child(3) button {
+  color: #004241 !important;
+}
+
+.container:nth-child(3) button:hover {
+  cursor: pointer;
+  background: #004241;
+  color: #f2f2f2 !important;
+  border: 2px solid #f2f2f2;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 28em;
+  padding: 1.5em 3rem;
+}
+
+.container .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  gap: 1.5rem;
+}
+
+.container .title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+
+.container .paragraph {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7em;
+}
+
+.container button {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  color: #e38826;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 20px;
+  -webkit-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+}
+
+.attribution {
+  padding: 1rem 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #006970;
+}
+
+@media only screen and (min-width: 60em) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px;
+    height: 32em;
+  }
+  .container .details {
+    padding-bottom: 3.5rem;
+  }
+  .container:nth-child(1) {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .container:nth-child(3) {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
